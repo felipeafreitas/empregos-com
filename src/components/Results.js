@@ -8,7 +8,7 @@ export default function Results() {
 			<Curriculum />
 			<Curriculum />
 			<Curriculum />
-			<nav aria-label='...' className='d-flex justify-content-center'>
+			<nav aria-label='...' className='d-flex justify-content-center m-5'>
 				<ul className='pagination'>
 					<li className='page-item disabled'>
 						<a className='page-link' href='#' tabindex='-1'>

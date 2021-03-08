@@ -1,10 +1,10 @@
 import Header from './components/Header';
-import Filter from './components/Filter';
+import Filters from './components/Filters';
 import Results from './components/Results';
 import Footer from './components/Footer';
 import Title from './components/Title';
 
-import './index.css'
+import './index.css';
 
 function App() {
 	return (
@@ -13,11 +13,11 @@ function App() {
 			<div className='container'>
 				<Title />
 				<div className='d-flex flex-wrap'>
-					<Filter />
+					<Filters />
 					<Results />
 				</div>
-				<Footer />
 			</div>
+			<Footer />
 		</div>
 	);
 }

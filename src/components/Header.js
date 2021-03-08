@@ -1,25 +1,16 @@
 import React from 'react';
 import Logo from '../img/empregos-logo.svg';
-import {
-	Navbar,
-	Nav,
-	NavDropdown,
-	Form,
-	FormControl,
-	Button,
-} from 'react-bootstrap';
+import { Navbar, Nav, NavDropdown, Form, FormControl } from 'react-bootstrap';
 
 export default function Header() {
 	return (
-		<header>
+		<header className='sticky-top'>
 			<Navbar
-				bg='transparent'
+				bg='white'
 				expand='lg'
 				className='container d-flex justify-content-between'
 			>
-				{/* <Navbar.Toggle aria-controls='basic-navbar-nav' /> */}
-
-				<NavDropdown title='Menu' id='basic-nav-dropdown'>
+				<NavDropdown title='Menu' id='basic-nav-dropdown' className=''>
 					<NavDropdown.Item href='#action/3.1'>Vagas</NavDropdown.Item>
 					<NavDropdown.Item href='#action/3.2'>Empresas</NavDropdown.Item>
 					<NavDropdown.Item href='#action/3.3'>Currículos</NavDropdown.Item>
@@ -35,27 +26,10 @@ export default function Header() {
 						<strong>RECRUTADOR: </strong>Clique aqui
 					</NavDropdown.Item>
 				</NavDropdown>
-				{/* <Navbar.Collapse id='basic-navbar-nav'>
-					<Nav className='mr-auto'>
-						<NavDropdown title='Menu' id='basic-nav-dropdown'>
-							<NavDropdown.Item href='#action/3.1'>Action</NavDropdown.Item>
-							<NavDropdown.Item href='#action/3.2'>
-								Another action
-							</NavDropdown.Item>
-							<NavDropdown.Item href='#action/3.3'>Something</NavDropdown.Item>
-							<NavDropdown.Divider />
-							<NavDropdown.Item href='#action/3.4'>
-								Separated link
-							</NavDropdown.Item>
-						</NavDropdown>
-					</Nav>
-				</Navbar.Collapse> */}
-				<Navbar.Brand href='#home'>
-					<img alt='' src={Logo} className='d-inline-block align-top' />
+				<Navbar.Brand href='/' className=''>
+					<img alt='' src={Logo} className='d-inline-block align-top' style={{width: '160px'}} />
 				</Navbar.Brand>
-				<Nav>
-					{/* <Nav.Link href='#home'>EMPRESAS</Nav.Link>
-					<Nav.Link href='#link'>CADASTRE-SE</Nav.Link> */}
+				<Nav className=''>
 					<button type='button' className='btn btn-outline-warning rounded-0'>
 						ENTRE
 					</button>
@@ -65,24 +39,6 @@ export default function Header() {
 			{/* SEARCH BAR */}
 			<Navbar bg='warning' expand='lg'>
 				<div className='container d-flex justify-content-center'>
-					{/* <Navbar.Toggle aria-controls='basic-navbar-nav' />
-					<Navbar.Collapse id='basic-navbar-nav'>
-						<Nav className='mr-auto'>
-							<NavDropdown title='Busca por Currículos' id='basic-nav-dropdown'>
-								<NavDropdown.Item href='#action/3.1'>Action</NavDropdown.Item>
-								<NavDropdown.Item href='#action/3.2'>
-									Another action
-								</NavDropdown.Item>
-								<NavDropdown.Item href='#action/3.3'>
-									Something
-								</NavDropdown.Item>
-								<NavDropdown.Divider />
-								<NavDropdown.Item href='#action/3.4'>
-									Separated link
-								</NavDropdown.Item>
-							</NavDropdown>
-						</Nav>
-					</Navbar.Collapse> */}
 					<Form inline className='d-flex flex-row flex-nowrap w-100'>
 						<FormControl
 							type='text'
