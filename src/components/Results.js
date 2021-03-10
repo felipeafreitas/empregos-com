@@ -1,42 +1,30 @@
 import Curriculum from './Curriculum';
+import data from '../data/data';
+import React, { useState } from 'react';
+import Pagination from './Pagination';
 
 export default function Results() {
+	const [curriculos, setCurriculos] = useState(data);
+
+	console.log(curriculos[0]);
+
 	return (
 		<div className='col-12 col-lg-9'>
-			<Curriculum />
-			<Curriculum />
-			<Curriculum />
-			<Curriculum />
-			<Curriculum />
-			<nav aria-label='...' className='d-flex justify-content-center m-5'>
-				<ul className='pagination'>
-					<li className='page-item disabled'>
-						<a className='page-link' href='#' tabindex='-1'>
-							Previous
-						</a>
-					</li>
-					<li className='page-item active'>
-						<a className='page-link' href='#'>
-							1
-						</a>
-					</li>
-					<li className='page-item'>
-						<a className='page-link' href='#'>
-							2 <span className='sr-only'>(current)</span>
-						</a>
-					</li>
-					<li className='page-item'>
-						<a className='page-link' href='#'>
-							3
-						</a>
-					</li>
-					<li className='page-item'>
-						<a className='page-link' href='#'>
-							Next
-						</a>
-					</li>
-				</ul>
-			</nav>
+			{curriculos.map((element) => {
+				return (
+					<Curriculum
+						titulo={element.titulo}
+						subtitulo={element.subtitulo}
+						endereco={element.endereco}
+						ultimo={element.ultimo}
+						descricao={element.descricao}
+						cargos={element.cargos}
+						salario={element.salario}
+						atualizado={element.atualizado}
+					/>
+				);
+			})}
+			<Pagination />
 		</div>
 	);
 }
